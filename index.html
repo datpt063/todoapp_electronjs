@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.$ = window.jQuery = require("jquery");
+    </script>
+</head>
+
+<body>
+    <div class="date">
+        <div class="calendar">
+            <div class="day">24</div>
+            <div class="my">
+                <div class="month">Feb</div>
+                <div class="year">2020</div>
+            </div>
+        </div>
+        <div class="today">Monday</div>
+    </div>
+    <!-- process -->
+    <div class=progress>
+        <div class="progressbar">
+            <div class="completed-progress"></div>
+            <div class="doing-progress"></div>
+        </div>
+    </div>
+
+    <!-- form add task -->
+    <form class="form">
+        <input class="context" id="newTask" placeholder="Add new item" />
+        <button class="plus" id="createTodoBtn"></button>
+    </form>
+    <!-- list task -->
+    <div id="list-item"></div>
+    <!--  -->
+    <div class="toggle-list-doing">
+        <img src="img/arrow.svg" alt="Completed Toggle">
+        <span>Doing</span>
+    </div>
+    <div class="panel-doing">
+        <div id="doing-list"></div>
+    </div>
+    <div class="toggle-list-completed">
+        <img src="img/arrow.svg" alt="Completed Toggle">
+        <span>Completed</span>
+
+    </div>
+    <div class="panel-completed">
+        <div id="completed-list"></div>
+    </div>
+    <div class="row">
+        <button class="sendMain">Send mail</button>
+        <button class="reset">Reset Progress</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
